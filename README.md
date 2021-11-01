@@ -1,12 +1,6 @@
 
 ### Project setup
 
-- Clone repo
-```bash
-git clone https://github.com/vueComponent/ant-design-vue-pro.git
-cd ant-design-vue-pro
-```
-
 - Install dependencies
 ```
 yarn install
