@@ -52,6 +52,7 @@ const user = {
       return new Promise((resolve, reject) => {
         getInfo().then(response => { // 获取当前用户的路由权限信息
           const result = response.result
+          console.log(result, '接口返回的权限路由')
           if (result.role && result.role.permissions.length > 0) {
             const role = result.role
 
@@ -66,7 +67,7 @@ const user = {
             })
             // 添加permissionList属性 permissionList存储permissionId
             role.permissionList = role.permissions.map(permission => { return permission.permissionId })
-
+            delete role.permissions
             commit('SET_ROLES', result.role)
             commit('SET_INFO', result)
           } else {

@@ -8,17 +8,13 @@
       <a-menu class="ant-pro-drop-down menu" :selected-keys="[]">
         <a-menu-item v-if="menu" key="center" @click="handleToCenter">
           <a-icon type="user" />
-          {{ $t('menu.account.center') }}
+          个人中心
         </a-menu-item>
         <a-menu-item v-if="menu" key="settings" @click="handleToSettings">
-          <a-icon type="setting" />
-          {{ $t('menu.account.settings') }}
-        </a-menu-item>
+          <a-icon type="setting" />个人设置</a-menu-item>
         <a-menu-divider v-if="menu" />
         <a-menu-item key="logout" @click="handleLogout">
-          <a-icon type="logout" />
-          {{ $t('menu.account.logout') }}
-        </a-menu-item>
+          <a-icon type="logout" />退出登录</a-menu-item>
       </a-menu>
     </template>
   </a-dropdown>
@@ -51,8 +47,8 @@ export default {
     },
     handleLogout (e) {
       Modal.confirm({
-        title: this.$t('layouts.usermenu.dialog.title'),
-        content: this.$t('layouts.usermenu.dialog.content'),
+        title: '信息',
+        content: '您确定要注销吗？',
         onOk: () => {
           // return new Promise((resolve, reject) => {
           //   setTimeout(Math.random() > 0.5 ? resolve : reject, 1500)

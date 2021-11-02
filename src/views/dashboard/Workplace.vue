@@ -5,7 +5,11 @@
 </template>
 
 <script>
-
+  export default {
+    mounted () {
+      console.log(this.$route, this.$router)
+    }
+  }
 </script>
 
 <style lang="less" scoped>
